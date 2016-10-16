@@ -1,5 +1,4 @@
-# mis
-    ###建表
+###建表
     CREATE TABLE `设备类型` (
     `设备类型ID` int(11) NOT NULL,
     `设备类型` varchar(45) NOT NULL,
@@ -50,4 +49,4 @@
   INSERT INTO `保养消耗` VALUES (1,1,'电线',2,'根');
   (1)根据设备ID查询保养记录
 select * from 设备 as a inner join 保养记录 as b on a.设备ID=b.设备ID
-![alt text](2.png)
+![alt text](https://github.com/09143573/mis/2.png)
