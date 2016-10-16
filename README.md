@@ -6,7 +6,7 @@
     `提前期` int(11) NOT NULL,
     `备注` varchar(45) DEFAULT NULL,
     PRIMARY KEY (`设备类型ID`));
-  INSERT INTO `设备类型` VALUES (2,'防冻液喷洒设备',7,2,'11月20日-4月1日'),(5,'桶位仪',30,5,NULL),(16,'振动筛电机',180,7,NULL),(18,'球磨机',365,20,NULL);
+     INSERT INTO `设备类型` VALUES (2,'防冻液喷洒设备',7,2,'11月20日-4月1日'),(5,'桶位仪',30,5,NULL),(16,'振动筛电机',180,7,NULL),(18,'球磨机',365,20,NULL);
   CREATE TABLE `设备` (
     `设备ID` int(11) NOT NULL,
     `设备类型ID` int(11) NOT NULL,
@@ -36,7 +36,6 @@
     CONSTRAINT `k3` FOREIGN KEY (`设备ID`) REFERENCES `设备` (`设备ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
     CONSTRAINT `k4` FOREIGN KEY (`保养项目ID`) REFERENCES `保养项目` (`保养项目ID`) ON DELETE NO ACTION ON UPDATE NO ACTION);
   INSERT INTO `保养记录` VALUES (1,1,1,'张三','完成','2016-10-09'),(2,1,2,'李四','完成','2016-10-11'),(3,2,4,'张','完成','2016-10-10');
-
   CREATE TABLE `保养消耗` (
     `保养消耗ID` int(11) NOT NULL,
     `保养记录ID` int(11) NOT NULL,
@@ -50,4 +49,4 @@
   ###查询
   (1)根据设备ID查询保养记录
 select * from 设备 as a inner join 保养记录 as b on a.设备ID=b.设备ID
-![alt text](https://github.com/09143573/miS/to/2.png "Title")
+![alt text](2.PNG）
