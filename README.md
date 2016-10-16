@@ -1,5 +1,5 @@
 ###建表
-    CREATE TABLE `设备类型` (
+   CREATE TABLE `设备类型` (
     `设备类型ID` int(11) NOT NULL,
     `设备类型` varchar(45) NOT NULL,
     `保养周期` int(11) NOT NULL,
@@ -47,6 +47,7 @@
     KEY `k5_idx` (`保养记录ID`),
     CONSTRAINT `k5` FOREIGN KEY (`保养记录ID`) REFERENCES `保养记录` (`保养记录ID`) ON DELETE CASCADE ON UPDATE CASCADE);
   INSERT INTO `保养消耗` VALUES (1,1,'电线',2,'根');
+  ###查询
   (1)根据设备ID查询保养记录
 select * from 设备 as a inner join 保养记录 as b on a.设备ID=b.设备ID
-![alt text](https://github.com/09143573/mis/2.png)
+![alt text](https://github.com/09143573/miS/to/2.png "Title")
